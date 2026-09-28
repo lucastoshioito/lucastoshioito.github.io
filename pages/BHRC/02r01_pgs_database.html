@@ -290,13 +290,13 @@ lucas.toshio.ito@gmail.com</p>
 santorogen@gmail.com</p>
 <p><strong>Genetics Coordinator:</strong> Síntia Belangero – UNIFESP<br>
 sinbelangero@gmail.com</p>
-<p><em>Last updated: March 16, 2026</em></p>
+<p><em>Last updated: September 28, 2026</em></p>
 <hr>
 <section id="overview" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">9.1</span> Overview</h2>
 <p>This database stores polygenic scores (PGS or PRS) for several phenotypes in the Brazilian High-Risk Cohort for Mental Health Conditions (BHRC). Out of the 2,511 probands in the study, 2,175 underwent genotyping and passed quality control (QC), so only these individuals can be used for genetic analysis.</p>
 <p>We calculated the PGS for the participants using <strong>PRS-CS v1.1.0</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/30992449/">Ge et al., 2019</a>) and <strong>PRS-CSx v1.1.0</strong> (<a href="https://pubmed.ncbi.nlm.nih.gov/35513724/">Ruan et al., 2022</a>), based on summary statistics from prior genome-wide association studies (GWAS) for various phenotypes, primarily sourced from the Psychiatric Genomics Consortium (<a href="https://pgc.unc.edu/for-researchers/download-results/">PGC</a>). PRS-CSx was only applied for multi-ancestry GWAS phenotypes with ancestry-specific summary statistics available.</p>
-<p>PRS-CS applies a continuous Bayesian shrinkage parameter to estimate the mean posterior effect size for a GWAS, incorporating an external 1000 Genomes European Linkage Disequilibrium (LD) panel. The global shrinkage parameter for PRS-CS was derived from the data using a fully Bayesian approach, with other parameters set to default. The Plink v1.9 score function was used to calculate individual PGSs, which were then standardized in R to have a mean of 0 and a standard deviation of 1.</p>
+<p>PRS-CS applies a continuous Bayesian shrinkage parameter to estimate the mean posterior effect size for a GWAS, incorporating an external 1000 Genomes European Linkage Disequilibrium (LD) panel. The global shrinkage parameter for PRS-CS was derived from the data using a fully Bayesian approach, with other parameters set to default. The PLINK v1.9 score function was used to calculate individual PGSs, which were then standardized in R to have a mean of 0 and a standard deviation of 1.</p>
 <p>The PGS value is based solely on the individual’s genetic data and the summary statistics used. Therefore, regardless of the number of individuals analyzed, this value will remain consistent.</p>
 <p>Publications that have used BHRC polygenic scores are listed on the <a href="./02p02_pgs_publications.html">BHRC polygenic score publications</a> page.</p>
 <hr>
@@ -318,9 +318,9 @@ sinbelangero@gmail.com</p>
 </li>
 <li>Identifier: identifier used for the file (ident, subjectid, probident, externalid, ext_genid).<br>
 </li>
-<li>PGS: Each phenotype have its own PGS column in the format - “prscs/prscsx”_”Phenoytpe”_”Year”.<br>
+<li>PGS: Each phenotype has its own PGS column in the format “prscs/prscsx”_”Phenotype”_”Year”.<br>
 </li>
-<li>Principal components (PCs): At the end of the file named from PC1:20</li>
+<li>Principal components (PCs): Located at the end of the file and named PC1 through PC20.</li>
 </ul></li>
 </ul>
 <hr>
@@ -333,16 +333,17 @@ sinbelangero@gmail.com</p>
 <li><strong>Alzheimer’s Disease (AD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/35379992/">Bellenguez et al., 2022</a></li>
 <li><strong>Attention Deficit Hyperactivity Disorder (ADHD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/36702997/">Demontis et al., 2023</a></li>
 <li><strong>Attention Deficit Hyperactivity Disorder Symptoms (ADHD_SYMPT)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/40962958/">van der Laan et al., 2025</a></li>
-<li><strong>Anorexia Nervosa (AN)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/31308545/">Watson et al., 2019</a></li>
+<li><strong>Anorexia Nervosa (AN)</strong> – <a href="https://www.nature.com/articles/s44220-026-00698-2">Termorshuizen et al., 2026</a></li>
 <li><strong>Anxiety Disorder (ANX)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/41634414/">Strom et al., 2026</a></li>
 <li><strong>Autism Spectrum Disorder (ASD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/41034588/">Zhang et al., 2025</a>
 <ul>
 <li>Early onset/ Late onset</li>
 </ul></li>
-<li><strong>Big Five Personality Traits (B5)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/39134740/">Gupta et al., 2024</a>
+<li><strong>Big Five Personality Traits (B5)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/42686911/">Schwaba et al., 2026</a>
 <ul>
 <li>Agreeableness/ Conscientiousness/ Extraversion/ Neuroticism/ Openness</li>
 </ul></li>
+<li><strong>Binge Eating (BE)</strong> – <a href="https://www.nature.com/articles/s44220-026-00698-2">Termorshuizen et al., 2026</a></li>
 <li><strong>Bipolar Disorder (BD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/39843750/">O’Connell et al., 2025</a></li>
 <li><strong>Body Mass Index (BMI)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/40691366/">Smit et al., 2025</a></li>
 <li><strong>Borderline Personality Disorder (BPD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/40832388/">Streit et al., 2025</a></li>
@@ -362,6 +363,7 @@ sinbelangero@gmail.com</p>
 <li><strong>Insomnia (ISM)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/30804565/">Jansen et al., 2019</a></li>
 <li><strong>Loneliness (LONE)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/29970889/">Day et al., 2018</a></li>
 <li><strong>Major Depressive Disorder (MDD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/39814019/">Adams et al., 2025</a></li>
+<li><strong>Age at Menarche (MEN)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/38951643/">Kentistou et al., 2024</a></li>
 <li><strong>Non-Suicidal Self-Injury (NSSI)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/38058956/">Colbert et al., 2023</a></li>
 <li><strong>Obsessive Compulsive Disorder (OCD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/40360802/">Strom et al., 2025</a></li>
 <li><strong>Opioid Use Disorder (OUD)</strong> – <a href="https://pubmed.ncbi.nlm.nih.gov/35879402/">Deak et al., 2022</a></li>
